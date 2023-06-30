@@ -27,13 +27,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-
-      - name: Terraform Init
-        run: terraform init
-
-      - name: Terraform Format
-        run: terraform fmt
-        
+          
       - name: Checkout repo
         uses: actions/checkout@master
 
@@ -45,6 +39,12 @@ jobs:
           check: CKV_AWS_1, CKV_AWS_2, CKV_AWS_3
           output_format: sarif
           output_file_path: reports/results.sarif 
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Format
+        run: terraform fmt
           
       - name: Terraform Plan
         run: terraform plan -out=tfplan
