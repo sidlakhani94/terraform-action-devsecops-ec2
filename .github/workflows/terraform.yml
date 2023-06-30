@@ -37,7 +37,7 @@ jobs:
         with:
           directory: .
           check: CKV_AWS_1, CKV_AWS_2, CKV_AWS_3
-          output_format: json
+          output_format: json,cli
          # output_file_path: reports/results.sarif 
 
       - name: Terraform Init
