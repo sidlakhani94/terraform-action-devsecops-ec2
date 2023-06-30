@@ -17,13 +17,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: us-east-1
-
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master
@@ -44,6 +37,7 @@ jobs:
         uses: devops-infra/action-tflint@v0.3
         with:
           tflint_config: .tflint.hcl
+          dir_filter: .
 
   plan:
     name: 'Plan'
