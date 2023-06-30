@@ -38,7 +38,10 @@ jobs:
         with:
           tflint_config: .tflint.hcl
           tflint_params:  "--deep"
-#           dir_filter: .
+          tflint_output: "json"
+          
+      - name: Display TFLint Results
+        run: echo "${{ steps.tflint.outputs.tflint-output }}"
 
   plan:
     name: 'Plan'
