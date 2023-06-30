@@ -37,8 +37,16 @@ jobs:
         with:
           directory: .
          # check: CKV_AWS_1, CKV_AWS_2, CKV_AWS_3
-        #  output_format: json,cli
-         # output_file_path: reports/results.sarif 
+          output_format: sarif
+          output_file_path: reports/results.sarif
+
+          
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        if: success() || failure()
+        with:
+          sarif_file: results.sarif
+          continue-on-error: true
 
       - name: Terraform Init
         run: terraform init
