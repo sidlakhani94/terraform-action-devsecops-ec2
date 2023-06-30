@@ -32,9 +32,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v1
+        with:
+          tflint_version: v0.29.0
+      - name: Install Terraform plugins
+        run: tflint --init
+      - name: Lint Terraform files
+        run: tflint
 
-      - name: Check linting of Terraform files
-        uses: devops-infra/action-tflint@v0.3
+#       - name: Check linting of Terraform files
+#         uses: devops-infra/action-tflint@v0.3
 #         with:
 #           tflint_config: .tflint.hcl
 #           tflint_params:  "--deep"
