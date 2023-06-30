@@ -37,7 +37,7 @@ jobs:
         uses: devops-infra/action-tflint@v0.3
         with:
           tflint_config: .tflint.hcl
-          dir_filter: .
+          dir_filter: terraform-action-devsecops-ec2
 
   plan:
     name: 'Plan'
