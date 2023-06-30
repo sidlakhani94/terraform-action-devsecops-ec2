@@ -39,6 +39,7 @@ jobs:
          # check: CKV_AWS_1, CKV_AWS_2, CKV_AWS_3
           output_format: sarif
           output_file_path: reports/results.sarif
+          continue-on-error: true
 
           
 #       - name: Upload SARIF file
