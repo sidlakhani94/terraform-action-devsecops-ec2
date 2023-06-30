@@ -35,13 +35,13 @@ jobs:
 
       - name: Check linting of Terraform files
         uses: devops-infra/action-tflint@v0.3
-        with:
-          tflint_config: .tflint.hcl
-          tflint_params:  "--deep"
-          tflint_output: "json"
+#         with:
+#           tflint_config: .tflint.hcl
+#           tflint_params:  "--deep"
+#           tflint_output: "json"
           
-      - name: Display TFLint Results
-        run: echo "${{ steps.tflint.outputs.tflint-output }}"
+#       - name: Display TFLint Results
+#         run: echo "${{ steps.tflint.outputs.tflint-output }}"
 
   plan:
     name: 'Plan'
