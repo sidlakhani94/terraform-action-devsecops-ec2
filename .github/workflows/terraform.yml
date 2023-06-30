@@ -33,9 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Setup TFLint
-        uses: terraform-linters/setup-tflint@v1
-        with:
-          tflint_version: v0.29.0
+        run: curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
       - name: Install Terraform plugins
         run: tflint --init
       - name: Lint Terraform files
