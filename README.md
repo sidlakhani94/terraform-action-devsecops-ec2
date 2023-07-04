@@ -1,5 +1,5 @@
-# Product within an API Management Service
-Terraform Child Module to Create/Provision Product within an API Management Service in Azure.
+# DevSecOps CICD for Terraform Deployment using Github Action.
+DevSecOps CICD for Terraform Deployment using Github Action to scan vulnerabilities of Terraform code.
 
 ## Requirements
 
