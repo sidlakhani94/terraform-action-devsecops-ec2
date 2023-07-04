@@ -44,7 +44,7 @@ No inputs.
 No outputs.
 
 ### apply output
-
+```
 
 Terraform used the selected providers to generate the following execution
 plan. Resource actions are indicated with the following symbols:
@@ -162,3 +162,4 @@ aws_instance.my_ec2_instance: Still creating... [50s elapsed]
 aws_instance.my_ec2_instance: Creation complete after 55s [id=i-00c22e3628e9cb59e]
 
 Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
