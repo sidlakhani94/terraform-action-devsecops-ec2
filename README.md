@@ -20,13 +20,13 @@ No modules.
 
 ## Steps
 ### create
-`terraform init`
-`terraform plan`
-`terraform apply -auto-approve -no-color | tee tfapply.txt`
-`terraform output --json | tee output_values.json`
+1. `terraform init`
+2. `terraform plan`
+3. `terraform apply -auto-approve -no-color | tee tfapply.txt`
+4. `terraform output --json | tee output_values.json`
 
 ### destroy
-`terraform destroy -auto-approve`
+1. `terraform destroy -auto-approve`
 
 ## Resources
 
